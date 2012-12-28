@@ -1,0 +1,80 @@
+[
+  {
+    "regex": "GET (?:https?://[^/]+|[^/]+)?/quizquestions/random\\b",
+    "status": 200,
+    "response": {
+      "question": "What is the answer to life, the universe and everything?",
+      "answers": ["Forty-two", "Twenty-seven"],
+      "owner": "sweng", 
+      "solutionIndex": 0, 
+      "tags": ["h2g2", "trivia"],
+      "id": "1"
+    },
+    "contentType": "application/json"
+  },
+  {
+    "regex": "POST (?:https?://[^/]+|[^/]+)?/quizquestions\\b",
+    "status": 201,
+    "response": {
+      "question": "What is the answer to life, the universe and everything?",
+      "answers": ["Forty-two", "Twenty-seven"],
+      "owner": "sweng", 
+      "solutionIndex": 0, 
+      "tags": ["h2g2", "trivia"],
+      "id": "1"
+    },
+    "contentType": "application/json"
+  },
+  {
+    "regex": "POST (?:https?://[^/]+|[^/]+)?/quizquestions/.*/rating\\b",
+    "status": 204
+  },
+  {
+    "regex": "GET (?:https?://[^/]+|[^/]+)?/quizquestions/.*/ratings\\b",
+    "status": 200,
+    "response": {
+        "likeCount": 12,
+        "dislikeCount": 789,
+        "incorrectCount": 987
+    },
+    "contentType": "application/json"
+  },
+  {
+    "regex": "GET (?:https?://[^/]+|[^/]+)?/quizquestions/.*/rating\\b",
+    "status": 204    
+  },
+  {
+    "regex": "GET (?:https?://[^/]+|[^/]+)?/login\\b",
+    "status": 200,
+    "response": {
+      "token": "fixture_session",
+      "message": "Here's your authentication token. Please validate it with Tequila at https://tequila.epfl.ch/cgi-bin/tequila/login"
+    },
+    "contentType": "application/json"
+  },
+  {
+    "regex": "POST (?:https?://[^/]+|[^/]+)?/cgi-bin/tequila/login\\b",
+    "status": 302,
+    "response": {
+      "message": "Your token has been authenticated."
+    },
+    "contentType": "application/json"
+  },
+  {
+    "regex": "POST (?:https?://[^/]+|[^/]+)?/login\\b",
+    "status": 200,
+    "response": {
+      "session": "fixture_session",
+      "message": "Here's your session id. Please include the following HTTP header in your subsequent requests:\nAuthorization: Tequila fixture_session"
+    },
+    "contentType": "application/json"
+  },
+  {
+    "regex": "POST (?:https?://[^/]+|[^/]+)?/cgi-bin/tequila/logout\\b",
+    "status": 200,
+    "response": {
+      "message": "You have been logged out."
+    },
+    "contentType": "application/json"
+  }
+]

@@ -1,0 +1,33 @@
+{
+ "owner": "sweng", 
+ "solutionIndex": 0, 
+ "question": "[FIXTURE] what is the answer to life, the universe and everything?", 
+ "answers": [
+  "-1",
+  "20",
+  "0",
+  "1",
+  "2",
+  "3",
+  "3",
+  "4",
+  "5",
+  "6",
+  "24",
+  "99",
+  "-1234",
+  "111111",
+  "WRONG",
+  "SWENG",
+  "EPFL",
+  "7",
+  "8",
+  "9",
+  "CORRECT" 
+ ], 
+ "tags": [
+  "hitch", "hiker's", "guide", 
+  "trivia"
+ ],
+ "id":"1"
+}
